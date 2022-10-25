@@ -1,114 +1,144 @@
 {
-  "name": "react-antd-helper",
-	"displayName": "react-antd-helper",
-	"description": "一款快速生成react+antd各种场景的模板插件",
-	"version": "0.0.9",
-	"repository": "https://github.com/sorryljt/react-antd-helper",
-	"publisher": "sorryljt",
-	"license": "MIT",
-	"icon": "logo.png",
-	"engines": {
-		"vscode": "^1.60.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-				"onCommand:react-antd-helper.helloWorld",
-        "onCommand:react-antd-helper.generateSimplePage",
-        "onCommand:react-antd-helper.generateSearchFormAndTable",
-        "onCommand:react-antd-helper.generateModal",
-        "onCommand:react-antd-helper.copyFileName",
-        "onCommand:react-antd-helper.copyFolderName"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "react-antd-helper.generateSimplePage",
-				"title": "生成一个简单页面",
-				"category": "快速生成React&Antd页面"
-			},
-			{
-				"command": "react-antd-helper.generateSearchFormAndTable",
-				"title": "生成一个表单检索&表格页面",
-				"category": "快速生成React&Antd页面"
-			},
-			{
-				"command": "react-antd-helper.generateModal",
-				"title": "生成一个弹窗页面",
-				"category": "快速生成React&Antd页面"
-			},
-			{
-				"command": "react-antd-helper.copyFileName",
-				"title": "复制文件名",
-				"category": "react-antd-helper"
-			},
-			{
-				"command": "react-antd-helper.copyFolderName",
-				"title": "复制文件夹名",
-				"category": "react-antd-helper"
-			}
-		],
-		"menus": {
+  "name": "xpht-react-antd-template",
+  "displayName": "xpht-react-antd-template",
+  "description": "一款xpht的react-antd开发模板插件",
+  "version": "1.0.0",
+  "repository": "https://github.com/denght/xpht-react-antd-template",
+  "publisher": "denght",
+  "license": "MIT",
+  "icon": "logo.jpg",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:xpht-react-antd-template.helloWorld",
+    "onCommand:xpht-react-antd-template.generateTemplatePage",
+    "onCommand:xpht-react-antd-template.generateXpTableWithSearch",
+    "onCommand:xpht-react-antd-template.generateProFormPage",
+    "onCommand:xpht-react-antd-template.generateModalComponent",
+    "onCommand:xpht-react-antd-template.generateEditableTable",
+    "onCommand:xpht-react-antd-template.generateAntdTablePage",
+    "onCommand:xpht-react-antd-template.copyFileName",
+    "onCommand:xpht-react-antd-template.copyFolderName"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "xpht-react-antd-template.generateTemplatePage",
+        "title": "空白模板",
+        "category": "快速生成汇天的react-antd页面"
+      },
+      {
+        "command": "xpht-react-antd-template.generateXpTableWithSearch",
+        "title": "带搜索项的xpTable页",
+        "category": "快速生成汇天的react-antd页面"
+      },
+      {
+        "command": "xpht-react-antd-template.generateProFormPage",
+        "title": "proForm模板页",
+        "category": "快速生成汇天的react-antd页面"
+      },
+      {
+        "command": "xpht-react-antd-template.generateModalComponent",
+        "title": "生成一个弹窗页面",
+        "category": "快速生成汇天的react-antd页面"
+      },
+      {
+        "command": "xpht-react-antd-template.generateEditableTable",
+        "title": "生成一个可编辑的表格页",
+        "category": "快速生成汇天的react-antd页面"
+      },
+      {
+        "command": "xpht-react-antd-template.generateAntdTablePage",
+        "title": "生产Antd的普通表格页",
+        "category": "快速生成汇天的react-antd页面"
+      },
+      {
+        "command": "xpht-react-antd-template.copyFileName",
+        "title": "复制文件名",
+        "category": "xpht-react-antd-template"
+      },
+      {
+        "command": "xpht-react-antd-template.copyFolderName",
+        "title": "复制文件夹名",
+        "category": "xpht-react-antd-template"
+      }
+    ],
+    "menus": {
       "explorer/context": [
-				{
+        {
           "group": "2_workspace@1",
           "when": "explorerResourceIsFolder",
-					"submenu": "react-antd-helper/submenu/generate"
+          "submenu": "xpht-react-antd-template/submenu/generate"
         },
-				{
+        {
           "group": "2_workspace@2",
-					"command": "react-antd-helper.copyFileName",
-					"when": "!explorerResourceIsFolder"
+          "command": "xpht-react-antd-template.copyFileName",
+          "when": "!explorerResourceIsFolder"
         },
-				{
+        {
           "group": "2_workspace@3",
-					"command": "react-antd-helper.copyFolderName",
-					"when": "explorerResourceIsFolder"
+          "command": "xpht-react-antd-template.copyFolderName",
+          "when": "explorerResourceIsFolder"
         }
       ],
-			"react-antd-helper/submenu/generate": [
-				{
-					"command": "react-antd-helper.generateSimplePage",
-					"group": "1_generate@1"
-				},
-				{
-					"command": "react-antd-helper.generateSearchFormAndTable",
-					"group": "1_generate@2"
-				},
-				{
-					"command": "react-antd-helper.generateModal",
-					"group": "1_generate@3"
-				}
-			]
+      "xpht-react-antd-template/submenu/generate": [
+        {
+          "command": "xpht-react-antd-template.generateTemplatePage",
+          "group": "1_generate@1"
+        },
+        {
+          "command": "xpht-react-antd-template.generateXpTableWithSearch",
+          "group": "1_generate@2"
+        },
+        {
+          "command": "xpht-react-antd-template.generateProFormPage",
+          "group": "1_generate@3"
+        },
+        {
+          "command": "xpht-react-antd-template.generateModalComponent",
+          "group": "1_generate@4"
+        },
+        {
+          "command": "xpht-react-antd-template.generateEditableTable",
+          "group": "1_generate@5"
+        },
+        {
+          "command": "xpht-react-antd-template.generateAntdTablePage",
+          "group": "1_generate@6"
+        }
+      ]
     },
-		"submenus": [
-			{
-				"id": "react-antd-helper/submenu/generate",
-				"label": "快速生成一个react&antd页面"
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "yarn run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"pretest": "yarn run compile && yarn run lint",
-		"lint": "eslint src --ext ts",
-		"test": "node ./out/test/runTest.js"
-	},
-	"devDependencies": {
-		"@types/vscode": "^1.60.0",
-		"@types/glob": "^7.2.0",
-		"@types/mocha": "^9.1.1",
-		"@types/node": "16.x",
-		"@typescript-eslint/eslint-plugin": "^5.30.0",
-		"@typescript-eslint/parser": "^5.30.0",
-		"eslint": "^8.18.0",
-		"glob": "^8.0.3",
-		"mocha": "^10.0.0",
-		"typescript": "^4.7.4",
-		"@vscode/test-electron": "^2.1.5"
-	}
+    "submenus": [
+      {
+        "id": "xpht-react-antd-template/submenu/generate",
+        "label": "快速生成汇天的react-antd页面"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.60.0",
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "eslint": "^8.18.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.0.0",
+    "typescript": "^4.7.4",
+    "@vscode/test-electron": "^2.1.5"
+  }
 }
